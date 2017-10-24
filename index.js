@@ -41,10 +41,24 @@ function getText(){
 	return finish.replace("&reg;", "")
 }
 
-setInterval(function(){
+
+function post(text){
 	T.post("statuses/update", {status: getText()}, (err, data, res) => {
 		if (err) {
 			throw err
 		}
+		else {
+			tweetnum++
+			console.log(tweetnum)
+		}
 	})
+}
+
+post(getText())
+
+let tweetnum = 0
+setInterval(function(){
+	post(getText())
+	tweetnum++
+	console.log(tweetnum)
 }, conf.timeInMinutes*60*1000)
