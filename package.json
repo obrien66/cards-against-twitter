@@ -1,0 +1,24 @@
+{
+  "name": "cards-against-twitter",
+  "version": "1.0.0",
+  "description": "A gross machine that will post cards against humanity combinations",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "twitter",
+    "twit",
+    "tweet",
+    "cards",
+    "against",
+    "humanity",
+    "CAH"
+  ],
+  "author": "Nicholas O'Brien <nicholas.obrien@ucc.on.ca> (http://obrien.tech)",
+  "license": "MIT",
+  "dependencies": {
+    "twit": "^2.2.9"
+  }
+}
