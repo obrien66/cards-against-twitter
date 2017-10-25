@@ -38,7 +38,8 @@ function getText(){
 		})
 	}
 
-	return finish.replace("&reg;", "")
+	finish = finish.replace("&reg;", "")
+	finish = finish.split("<br>").join("\n")
 }
 
 
