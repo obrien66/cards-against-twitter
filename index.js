@@ -38,7 +38,11 @@ function getText(){
 		})
 	}
 
-	finish = finish.replace("&reg;", "")
+	// finish = finish.replace("&reg;", "")
+	["&reg;", "<br>", "<i>", "</i>"].map(item => {
+		finish = finish.replace(item, "")
+	})
+
 	finish = finish.split("<br>").join("\n")
 
 	return finish
